@@ -4,6 +4,7 @@ expresion = ""
 expresionAnterior = ""
 resultadoMostrar = False
 parentesis = 0
+
 def preparacion(expr):
 
     if "%" in expr:
@@ -26,10 +27,8 @@ def preparacion(expr):
         
         if actual == "(" and (prev.isdigit() or prev == ")"):
             resultado += "*("
-        
         elif actual.isdigit() and prev == ")":
             resultado += "*" + actual
-        
         else:
             resultado += actual
 
